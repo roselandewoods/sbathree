@@ -9,9 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const reviewForm = document.getElementById('review-form');
     const restaurantNameInput = document.getElementById('restaurant-name');
     const reviewTextInput = document.getElementById('review-text');
-   
-    
-    // Event listener for loading reviews
+
     loadReviewsButton.addEventListener('click', () => {
 
     
@@ -25,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
    
         reviewsContainer.innerHTML = '';
 
-        // Create a DocumentFragment
         let fragment = document.createDocumentFragment();
 
         reviews.forEach(item => {
@@ -35,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             fragment.appendChild(div);
         });
 
-        // Append to the container
+    
         reviewsContainer.appendChild(fragment);
     });
 
@@ -43,19 +40,15 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault();
 
 
-        // Get the form data
         let restaurantName = restaurantNameInput.value;
        let reviewText = reviewTextInput.value;
 
-        // Create a element
        let newReview = document.createElement('div');
         newReview.classList.add('review-item');
         newReview.innerHTML = `<strong>${restaurantName}</strong>: ${reviewText}`;
 
-        // Add the new review to the top 
         reviewsContainer.prepend(newReview);
 
-        // Clear the form inputs
         restaurantNameInput.value = '';
         reviewTextInput.value = '';
     });
