@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
    
         reviewsContainer.innerHTML = '';
 
-        let fragment = document.createDocumentFragment();
+        const fragment = document.createDocumentFragment();
 
         reviews.forEach(item => {
-            let div = document.createElement('div');
+            const div = document.createElement('div');
             div.classList.add('review-item');
             div.innerHTML = `<strong>${item.name}</strong>: ${item.review}`;
             fragment.appendChild(div);
@@ -40,10 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault();
 
 
-        let restaurantName = restaurantNameInput.value;
-       let reviewText = reviewTextInput.value;
+        const restaurantName = restaurantNameInput.value;
+       const reviewText = reviewTextInput.value;
 
-       let newReview = document.createElement('div');
+       const newReview = document.createElement('div');
         newReview.classList.add('review-item');
         newReview.innerHTML = `<strong>${restaurantName}</strong>: ${reviewText}`;
 
