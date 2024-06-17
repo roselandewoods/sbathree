@@ -2,10 +2,8 @@
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Cache elements
     const loadReviewsButton = document.getElementById('load-reviews');
-    const reviewsContainer = document.querySelector('#reviews-container');
+    const reviewsContainer = document.getElementsById('#reviews-container');
     const reviewForm = document.getElementById('review-form');
     const restaurantNameInput = document.getElementById('restaurant-name');
     const reviewTextInput = document.getElementById('review-text');
@@ -52,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         restaurantNameInput.value = '';
         reviewTextInput.value = '';
     });
-    reviewsContainer.addEventListener('DOMNodeInserted', () => {
+    reviewsContainer.addEventListener('click', () => {
         if (reviewsContainer.firstChild) {
             reviewsContainer.firstChild.style.backgroundColor = '#fff';
             const sibling = reviewsContainer.firstChild.nextElementSibling;
@@ -62,4 +60,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }
  
     });
-});
+
