@@ -3,7 +3,7 @@
 
 
     const loadReviewsButton = document.getElementById('load-reviews');
-    const reviewsContainer = document.getElementsById('#reviews-container');
+    const reviewsContainer = document.getElementsById('reviews-container');
     const reviewForm = document.getElementById('review-form');
     const restaurantNameInput = document.getElementById('restaurant-name');
     const reviewTextInput = document.getElementById('review-text');
