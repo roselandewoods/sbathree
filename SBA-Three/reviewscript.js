@@ -47,8 +47,8 @@
 
         reviewsContainer.prepend(newReview);
 
-        restaurantNameInput.value = '';
-        reviewTextInput.value = '';
+        restaurantNameInput.value = 'none';
+        reviewTextInput.value = 'none';
     });
     reviewsContainer.addEventListener('click', () => {
         if (reviewsContainer.firstChild) {
